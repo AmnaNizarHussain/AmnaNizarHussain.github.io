@@ -1,292 +1,286 @@
+
 <html>
 <head>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+html
+{
+	font-size:100%;
 }
 
-html {
-  height: 100%;
+body
+{
+	-webkit-font-smoothing:antialiased;
+	color:#333332;
+	font-family:Lora, serif;
+	font-size:18px;
+	font-weight:400;
+	line-height:1.4;
+	text-rendering:optimizeLegibility;
 }
 
-body {
-  min-height: 100%;
-  background: #eee;
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  color: #222;
-  font-size: 14px;
-  line-height: 26px;
-  padding-bottom: 50px;
+.skill-set li:hover
+{
+	background:#3498db;
 }
 
-.container {
-  max-width: 700px;
-  background: #fff;
-  margin: 0px auto 0px;
-  box-shadow: 1px 1px 2px #DAD7D7;
-  border-radius: 3px;
-  padding: 40px;
-  margin-top: 50px;
+h1
+{
+	color:rgba(0,0,0,.75);
 }
 
-.header {
-  margin-bottom: 30px;
-}
-.header .full-name {
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-.header .first-name {
-  font-weight: 700;
-}
-.header .last-name {
-  font-weight: 300;
-}
-.header .contact-info {
-  margin-bottom: 20px;
-}
-.header .email,
-.header .phone {
-  color: #999;
-  font-weight: 300;
-}
-.header .separator {
-  height: 10px;
-  display: inline-block;
-  border-left: 2px solid #999;
-  margin: 0px 10px;
-}
-.header .position {
-  font-weight: bold;
-  display: inline-block;
-  margin-right: 10px;
-  text-decoration: underline;
+.wrapper
+{
+	height:100%;
 }
 
-.details {
-  line-height: 20px;
+.left
+{
+	background-color:rgba(0,0,0,.025);
+	border-right:1px solid rgba(0,0,0,.05);
+	float:right;
+	height:100%;
+	margin-left:-1px;
+	min-width:256px;
+	position:fixed;
+	width:33.33%;
+  
 }
-.details .section {
-  margin-bottom: 40px;
+
+.right
+{
+	float:right;
+	height:100%;
+	position:relative;
+	width:66.66%;
 }
-.details .section:last-of-type {
-  margin-bottom: 0px;
+
+
+.name-hero
+{
+	background:rgba(0,0,0,.001);
+	bottom:0;
+	height:290px;
+	left:0;
+	margin:auto;
+	position:absolute;
+	right:0;
+	top:0;
+	width:85%;
 }
-.details .section__title {
-  letter-spacing: 2px;
-  color: #54AFE4;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+
+.me-img
+{
+	background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/36334/profile/profile-512_4.jpg) no-repeat center center ;
+	background-size:100%;
+  background-position:0px;
+	border-radius:100%;
+	height:150px;
+	margin:0 auto;
+	position:relative;
+	width:150px;
 }
-.details .section__list-item {
-  margin-bottom: 40px;
+
+.name-hero h1
+{
+	font-family:Open Sans, sans-serif;
+	font-size:1.5em;
+	text-align:center;
 }
-.details .section__list-item:last-of-type {
-  margin-bottom: 0;
+
+.name-hero h1 em
+{
+	color:rgba(0,0,0,.3);
+	font-style:normal;
+	font-weight:700;
 }
-.details .left,
-.details .right {
-  vertical-align: top;
-  display: inline-block;
+
+.name-hero p
+{
+	color:rgba(0,0,0,.5);
+	font-size:.75em;
+	line-height:1.5;
+	margin:0 8px 0 0;
+	text-align:center;
 }
-.details .left {
-  width: 60%;
+
+.name-hero .name-text
+{
+	margin:0 auto;
+	width:85%;
 }
-.details .right {
-  tex-align: right;
-  width: 39%;
+
+.inner
+{
+	margin:0 auto;
+	max-width:975px;
+	padding:3em;
 }
-.details .name {
-  font-weight: bold;
+
+.inner h1
+{
+	font-size:1.75em;
 }
-.details a {
-  text-decoration: none;
-  color: #000;
-  font-style: italic;
+
+.inner p
+{
+	color:rgba(0,0,0,.3);
 }
-.details a:hover {
-  text-decoration: underline;
-  color: #000;
+
+.inner p em
+{
+	color:rgba(0,0,0,.75);
+	font-style:normal;
 }
-.details .skills__item {
-  margin-bottom: 10px;
+
+.inner section
+{
+	margin:100px auto;
 }
-.details .skills__item .right input {
-  display: none;
+
+ul
+{
+	list-style-type:none;
+	margin-top:-10px;
+	max-width:570px;
+	padding:0;
 }
-.details .skills__item .right label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: #C3DEF3;
-  border-radius: 20px;
-  margin-right: 3px;
+
+.skill-set li
+{
+	background:rgba(0,0,0,.75);
+	border-radius:5px;
+	color:#FFF;
+	display:inline-block;
+	list-style:none;
+	margin:15px 15px 0 0;
+	padding:10px;
+	text-align:justify;
 }
-.details .skills__item .right input:checked + label {
-  background: #79A9CE;
+
+@media screen and (max-width: 48em) {
+	.right,.left
+	{
+		float:none;
+    position:relative !important;
+		width:100%;
+    min-height:500px;
+	}
+  .handmade {
+  text-align:center !important;
+  margin-top:0px !important;
+}
+
+@media screen and (max-width: 75em) {
+    body
+{ font-size:16px;}
+}
+
+@media screen and (max-width: 60em) {
+    body
+{ font-size:14px;}
+}
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.handmade {
+  text-align:right;
+  margin-top:100px;
+}
+.handmade em {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.25em;
+  margin-left:5px;
 }
 </style>
 </head>
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic|Open+Sans:300,400,500,700|Waiting+for+the+Sunrise|Shadows+Into+Light' rel='stylesheet' type='text/css'>
 
-<div class="container">
-  <div class="header">
-    <div class="full-name">
-      <span class="first-name">John</span> 
-      <span class="last-name">Doe</span>
-    </div>
-    <div class="contact-info">
-      <span class="email">Email: </span>
-      <span class="email-val">john.doe@gmail.com</span>
-      <span class="separator"></span>
-      <span class="phone">Phone: </span>
-      <span class="phone-val">111-222-3333</span>
+<div class="wrapper clearfix">
+<div class="left">
+    
+    <div class="name-hero">
+      
+      <div class="me-img"></div>
+      
+      <div class="name-text">
+        
+        <h1>Anthony <em>Adamski</em></h1>
+        <p>10 Iroquois St Boston, MA 02120</p>
+        <p>adamskianthony@gmail.com</p> 
+        <p>(956) 500-5558</p>
+     
+      </div>
+   
     </div>
     
-    <div class="about">
-      <span class="position">Front-End Developer </span>
-      <span class="desc">
-        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
-      </span>
-    </div>
   </div>
-   <div class="details">
-    <div class="section">
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
+ <div class="right">
+    
+    <div class="inner">
+      <section>
+        <h1>Employment</h1>
+        <p>Winter 2015 - Present <em>Grand Interactive, llc. | Mobile App Developer</em></p>
+        <p>Raised $78,000 in early stage funding, created initial design
+          concepts, and oversaw initial development. Currently oversee and maintain all front end code and server functionality.</p>
+        <p>Spring 2012 - Winter 2015 | <em>PadMatcher Inc. | CTO, Co-Founder</em></p>
+        <p>Raised $78,000 in early stage funding, created initial design
+          concepts, and oversaw initial development. Oversaw and maintained all front end code and server functionality.</p>
+        <p>Fall 2011 - Fall 2013 | <em>Penrose Realty llc. | Desinger & Assistant</em></p>
+        <p>Responsible for all technical areas. Maintain servers, computers, and provide in office technical support. Rebranded company from ground up including a fully responsive website.  </p>
+      </section>
+      <section>
+        <h1>Technical Skills</h1>
+        <ul class="skill-set">
+          <li>Mobile Development</li>
+          <li>Xamarin</li>
+          <li>CSS3</li>
+          <li>Adobe Photoshop</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JQUERY</li>
+          <li>UI Design</li>
+          <li>Company Branding</li>
+          <li>Responsive Web Design</li>
+        </ul>
+      </section>
+      <section>
+        <h1>References</h1>
+        <p>William Grand | <em>Grand Interactive, llc. | CEO</em></p>
+        <p>(617) 448-0910 | wgrand@grandinteractive.com</p>
+        <p>Eric Chauvin | <em>PadMatcher Inc. | CEO</em></p>
+        <p>(617) 448-0910 | eric@padmatcher.com</p>
+        <p>Chris Heller <em>Penrose Realty LLC. | Broker</em></p>
+        <p>(617) 794-4554 | chris@penroserealty.com</p>
+      </section>
+            <section>
+        <h1>Personal Interests</h1>
+        <ul class="skill-set">
+          <li>Faith</li>
+          <li>Biblical Studies</li>
+          <li>Playing Guitar</li>
+          <li>Song Writing</li>
+          <li>Health & Nutrition</li>
+          <li>Reading</li>
+        </ul>
+      </section>
+      <section>
+        <div class="handmade">
+          <p>handmade by <em> Anthony Adamski</em></p>
         </div>
-                <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-
-      </div>
+      </section>
     </div>
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Sample Institute of technology</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-
-      </div>
-      
+    
   </div>
-     <div class="section">
-      <div class="section__title">Projects</div> 
-       <div class="section__list">
-         <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-         </div>
-         
-         <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-           </div>
-         </div>
-       </div>
-    </div>
-     <div class="section">
-       <div class="section__title">Skills</div>
-       <div class="skills">
-         <div class="skills__item">
-           <div class="left"><div class="name">
-             Javascript
-             </div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
-
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-         
-       </div>
-       <div class="skills__item">
-           <div class="left"><div class="name">
-             CSS</div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
-
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-         
-       </div>
-     <div class="section">
-     <div class="section__title">
-       Interests
-       </div>
-       <div class="section__list">
-         <div class="section__list-item">
-                  Football, programming.
-          </div>
-       </div>
-     </div>
-     </div>
-  </div>
+  
+  
+  
 </div>
 </html>
